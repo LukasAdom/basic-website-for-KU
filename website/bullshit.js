@@ -2,15 +2,10 @@ var imgs = ["img/title/title_0.png","img/title/title_1.png","img/title/title_2.p
 let loopclosed = false
 
 setInterval(() => {
-	if(!loopclosed){
-		loopclosed = true
   imgs.forEach(function (l, index) {
   setTimeout(function () {
-	  //console.log("url(" + l + ")");
 	  console.log(index);
     document.getElementById("imgseq").style.backgroundImage = "url(" + l + ")";
-	loopclosed = false
   }, index * 500);
 });
-};
 },500);
