@@ -1,10 +1,32 @@
+
+
+
 body{
   margin: 0;
   padding: 0;
   background: #1e1e1f;
-  background-image: linear-gradient(rgba(255,0,0,0), rgb(100,0, 0, 0));
+  background-image: linear-gradient(rgba(255,0,0,0), rgb(0, 0, 0));
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
   color: azure;
+}
+
+
+
+.logo{
+  margin: auto;
+  position: absolute;
+  top: 2%;
+  left: 87%;
+  transform-origin: 50% 50%;
+  width: 12%;
+  height: 43%;
+  background-image: url(img/logo.svg);
+  background-size: cover;
+  background-position: 0%;
+  background-repeat: no-repeat;
+  transform: scale(0.5);
+  object-fit: cover;
+  opacity: 1;
 }
