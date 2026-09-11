@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 3px solid black;
+            border-collapse: collapse;
+            aspect-ratio: 1;
+            width: 200px;
+        }
+ 
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+ 
+		 .container{
+		  width: 100%;
+		  height: 100%;
+		  padding: 0px;
+		}
+		
+		 .img1{
+		   width: auto;
+		   height: auto;
+		   background-size: cover;
+		   background-repeat: no-repeat;
+		   background-position: center;
+		   background-image: url("imgs\1.jpg");
+		}
+		 
+        .blue {
+            background-color: skyblue;
+        }
+ 
+        .red {
+            background-color: rgb(219, 118, 118);
+        }
+ 
+        .green {
+            background-color: #26fd05;
+        }
+		
+		.table{
+		 position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		 width: 800px;
+  height: 800px;
+		}
+    </style>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <td colspan="2" class="blue">
+			<div class="container">
+			1
+			</div>
+			</td>
+            <td rowspan="2" class="red">
+			<img src="imgs\2.jpg" style="object-fit: cover;
+   width: 50px;
+   height: 50px;"></td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="red">
+			<img src="imgs\3.jpg" style="object-fit: cover;
+   width: 50px;
+   height: 50px;"></td>
+            <td class="green">
+			<img src="imgs\4.jpg" style="object-fit: cover;
+   width: 50px;
+   height: 50px;"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="blue">
+			<img src="imgs\5.jpg" style="object-fit: cover;
+   width: 50px;
+   height: 50px;"></td>
+        </tr>
+    </table>
+</body>
+</html>
