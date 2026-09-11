@@ -6,31 +6,34 @@
     <title>Document</title>
     <style>
         table {
+		table-layout: fixed;
             border: 3px solid black;
             border-collapse: collapse;
             aspect-ratio: 1;
-            width: 200px;
+            width: 600px;
+			height: 600px;
         }
  
         td {
             border: 1px solid black;
             text-align: center;
+			padding: 0;
+            overflow: hidden;
+        }
+		
+ 
+		td img {
+		position: absolute;
+		top: 0;
+		left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+			object-position: center;
+            display: block;
         }
  
-		 .container{
-		  width: 100%;
-		  height: 100%;
-		  padding: 0px;
-		}
 		
-		 .img1{
-		   width: auto;
-		   height: auto;
-		   background-size: cover;
-		   background-repeat: no-repeat;
-		   background-position: center;
-		   background-image: url("imgs\1.jpg");
-		}
 		 
         .blue {
             background-color: skyblue;
@@ -57,31 +60,20 @@
 <body>
     <table class="table">
         <tr>
-            <td colspan="2" class="blue">
-			<div class="container">
-			1
-			</div>
+            <td colspan="2" class="blue"><img src="imgs\1.jpg" style="width:531px; height:350px;">
 			</td>
             <td rowspan="2" class="red">
-			<img src="imgs\2.jpg" style="object-fit: cover;
-   width: 50px;
-   height: 50px;"></td>
+			</td>
         </tr>
         <tr>
             <td rowspan="2" class="red">
-			<img src="imgs\3.jpg" style="object-fit: cover;
-   width: 50px;
-   height: 50px;"></td>
+			</td>
             <td class="green">
-			<img src="imgs\4.jpg" style="object-fit: cover;
-   width: 50px;
-   height: 50px;"></td>
+			</td>
         </tr>
         <tr>
             <td colspan="2" class="blue">
-			<img src="imgs\5.jpg" style="object-fit: cover;
-   width: 50px;
-   height: 50px;"></td>
+			</td>
         </tr>
     </table>
 </body>
