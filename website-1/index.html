@@ -99,17 +99,17 @@ background: linear-gradient(0deg,rgba(255, 171, 226, 1) 0%, rgba(255, 107, 198, 
         <tr>
             <td colspan="2" class="blue"><img src="imgs\1.jpg" style="width:531px; height:350px;">
 			</td>
-            <td rowspan="2" class="red"><img id="img2" src="imgs\2.jpg" style="width:266px; height: 478px; left: 531px;">
+            <td rowspan="2" class="red"><img id="img2" src="imgs\2.jpg" style="width:265px; height: 478px; left: 531px;">
 			</td>
         </tr>
         <tr>
-            <td rowspan="2" class="red"><img id="img3" src="imgs\3.jpg" style="width:266px; height: 448px; left: 0px; top: 350px">
+            <td rowspan="2" class="red"><img id="img3" src="imgs\3.jpg" style="width:266px; height: 446px; left: 0px; top: 350px">
 			</td>
             <td class="green"><img id="img5" src="imgs\5.jpg" style="width:266px; height: 129px; left: 266px; top: 350px">
 			</td>
         </tr>
         <tr>
-            <td colspan="2" class="blue"><img id="img4" src="imgs\4.jpg" style="width:531px; height: 318px; left: 266px; top: 478px">
+            <td colspan="2" class="blue"><img id="img4" src="imgs\4.jpg" style="width:530px; height: 318px; left: 266px; top: 478px">
 			</td>
         </tr>
     </table>
@@ -129,27 +129,39 @@ background: linear-gradient(0deg,rgba(255, 171, 226, 1) 0%, rgba(255, 107, 198, 
                 / window.innerWidth) * 100;
 			
 			if(zoom >= 149){
-			document.getElementById("img2").setAttribute("style","height:465px; width:266px; left: 531px;");
+			document.getElementById("img2").setAttribute("style","height:465px; width:265px; left: 531px;");
 			}else{	
-			document.getElementById("img2").setAttribute("style","width:266px; height: 478px; left: 531px;");
-			document.getElementById("img4").setAttribute("style","width:531px; height: 318px; left: 266px; top: 478px");
+			document.getElementById("img2").setAttribute("style","width:265px; height: 478px; left: 531px;");
+			document.getElementById("img3").setAttribute("style","width:266px; height: 446px; left: 0px; top: 350px");
+			document.getElementById("img4").setAttribute("style","width:530px; height: 318px; left: 266px; top: 478px");
 			}
 			
 			if(zoom <= 91){
-			document.getElementById("img2").setAttribute("style","height:499px; width:266px; left: 531px;");
+			document.getElementById("img2").setAttribute("style","height:500px; width:266px; left: 531px;");
+			document.getElementById("img3").setAttribute("style","width:266px; height: 447px; left: 0px; top: 350px");
+			document.getElementById("img4").setAttribute("style","width:531px; height: 319px; left: 266px; top: 478px");
+			
 			}
 			
 			if(zoom <= 51){
-			document.getElementById("img2").setAttribute("style","height:532px; width:266px; left: 531px;");
+			document.getElementById("img2").setAttribute("style","height:533px; width:266px; left: 531px;");
+			}
+			
+			if(zoom >= 109){
+			document.getElementById("img4").setAttribute("style","width:530px; height: 319px; left: 266px; top: 478px");
+			}
+			
+			if(zoom >= 124){
+			document.getElementById("img4").setAttribute("style","width:530px; height: 332px; left: 266px; top: 465px");
 			}
 			
 			if(zoom >= 149){
-			document.getElementById("img4").setAttribute("style","width:531px; height: 332px; left: 266px; top: 465px");
+			document.getElementById("img4").setAttribute("style","width:530px; height: 331px; left: 266px; top: 465px");
 			}
 			
 			if(zoom >= 174){
-			document.getElementById("img2").setAttribute("style","height:456px; width:266px; left: 531px;");
-			document.getElementById("img4").setAttribute("style","width:531px; height: 340px; left: 266px; top: 456px");
+			document.getElementById("img2").setAttribute("style","height:455px; width:266px; left: 531px;");
+			document.getElementById("img4").setAttribute("style","width:530px; height: 341px; left: 266px; top: 456px");
 			}
 			
 			if(zoom >= 199){
