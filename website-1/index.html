@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+	
+	body{
+	  margin: 0;
+	  padding: 0;
+	  background: #ffabe2;
+background: linear-gradient(0deg,rgba(255, 171, 226, 1) 0%, rgba(255, 107, 198, 1) 100%);
+	  background-repeat: repeat-x;
+	  background-attachment: fixed;
+	  overflow: hidden;
+	  color: azure;
+	}
+	
         table {
 		table-layout: fixed;
             border: 3px solid black;
@@ -49,32 +61,104 @@
 		
 		.table{
 		 position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
+		left: 27%;
+		top: 8%;
+		transform: translate(0%, 0%);
 		 width: 800px;
-  height: 800px;
+		  height: 800px;
+		  animation:spin 40s linear infinite;
 		}
+		
+		.bg{
+		background-image: url(imgs/bg.png);
+		background-size: 150px 150px;
+		height: 100vh;
+		width: 100vw;
+		background-position: 0px 0px;
+		animation: slide linear 10s infinite;	
+		}
+		
+		
+		@keyframes slide{
+		from{background-position: 0px 0px; }
+		to{background-position: -750px -750px;}
+		}
+		
+		@keyframes spin { 
+		100% { 
+			rotate: 360deg;
+		}
+		
+}
     </style>
 </head>
 <body>
+<div class="bg"></div>
+
     <table class="table">
         <tr>
             <td colspan="2" class="blue"><img src="imgs\1.jpg" style="width:531px; height:350px;">
 			</td>
-            <td rowspan="2" class="red">
+            <td rowspan="2" class="red"><img id="img2" src="imgs\2.jpg" style="width:266px; height: 478px; left: 531px;">
 			</td>
         </tr>
         <tr>
-            <td rowspan="2" class="red">
+            <td rowspan="2" class="red"><img id="img3" src="imgs\3.jpg" style="width:266px; height: 448px; left: 0px; top: 350px">
 			</td>
-            <td class="green">
+            <td class="green"><img id="img5" src="imgs\5.jpg" style="width:266px; height: 129px; left: 266px; top: 350px">
 			</td>
         </tr>
         <tr>
-            <td colspan="2" class="blue">
+            <td colspan="2" class="blue"><img id="img4" src="imgs\4.jpg" style="width:531px; height: 318px; left: 266px; top: 478px">
 			</td>
         </tr>
     </table>
+	
+	<script>
+	
+	// Fuck JavaScript
+	
+	window.addEventListener(
+            "resize", getSizes, false);
+
+        let out = document.querySelector(".size");
+
+        function getSizes() {
+            let zoom = ((window.outerWidth - 10)
+                / window.innerWidth) * 100;
+			
+			if(zoom >= 149){
+			document.getElementById("img2").setAttribute("style","height:465px; width:266px; left: 531px;");
+			}else{	
+			document.getElementById("img2").setAttribute("style","width:266px; height: 478px; left: 531px;");
+			document.getElementById("img4").setAttribute("style","width:531px; height: 318px; left: 266px; top: 478px");
+			}
+			
+			if(zoom <= 91){
+			document.getElementById("img2").setAttribute("style","height:499px; width:266px; left: 531px;");
+			}
+			
+			if(zoom <= 51){
+			document.getElementById("img2").setAttribute("style","height:532px; width:266px; left: 531px;");
+			}
+			
+			if(zoom >= 149){
+			document.getElementById("img4").setAttribute("style","width:531px; height: 332px; left: 266px; top: 465px");
+			}
+			
+			if(zoom >= 174){
+			document.getElementById("img2").setAttribute("style","height:456px; width:266px; left: 531px;");
+			document.getElementById("img4").setAttribute("style","width:531px; height: 340px; left: 266px; top: 456px");
+			}
+			
+			if(zoom >= 199){
+			document.getElementById("img2").setAttribute("style","height:478px; width:266px; left: 531px;");
+			}
+
+			
+        }
+		
+	</script>
+	
 </body>
 </html>
