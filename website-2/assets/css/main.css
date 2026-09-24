@@ -155,6 +155,16 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	.wave {
+		position: absolute;
+		width: 1000vw;
+		height: 100%;
+		background-color: #de7172;
+		background-repeat: repeat-x;
+		background-image: url("../../images/bg.jpg");
+
+	}
+
 	body {
 		display: -moz-flex;
 		display: -webkit-flex;
