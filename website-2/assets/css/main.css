@@ -159,11 +159,16 @@ input, select, textarea {
 		position: absolute;
 		width: 1000vw;
 		height: 100%;
-		background-color: #de7172;
-		background-repeat: repeat-x;
-		background-image: url("../../images/bg.jpg");
+		background-repeat: repeat;
+		background-image: url("../../images/wave2.png");
+		  animation:wmove 30s linear infinite;
 
 	}
+
+		@keyframes wmove{
+		from{background-position: 0px 0px; }
+		to{background-position: -2000px 0px;}
+		}
 
 	body {
 		display: -moz-flex;
