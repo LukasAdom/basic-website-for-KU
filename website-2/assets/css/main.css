@@ -159,7 +159,7 @@ input, select, textarea {
 		position: absolute;
 		width: 1000vw;
 		height: 100%;
-		background-color: #a81414;
+		background-color: #131313;
 		background-repeat: repeat;
 		background-image: url("../../images/wave2.png");
 		  animation:wmove 30s linear infinite;
