@@ -157,7 +157,7 @@ input, select, textarea {
 
 	.wave {
 		position: absolute;
-		width: 1000vw;
+		width: 600vw;
 		height: 100%;
 		background-color: #131313;
 		background-repeat: repeat;
