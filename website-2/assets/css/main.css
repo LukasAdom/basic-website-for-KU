@@ -155,17 +155,30 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	.luna{
+		position: absolute;
+		width: 280px;
+		height: 280px;
+		left: 541%;
+		z-index: 1;
+		background-color: #ffffff;
+		background-image: url("../../images/luna3.png");
+
+	}
+
 	.wave {
 		position: absolute;
 		width: 600vw;
 		height: 100%;
 		background-color: #131313;
+		z-index: 0;
 		background-repeat: repeat;
-		background-image: url("../../images/wave2.png");
+		background-image: url("../../images/wave3.png");
 		  animation:wmove 30s linear infinite;
 
 	}
 
+	
 		@keyframes wmove{
 		from{background-position: 0px 0px; }
 		to{background-position: -2000px 0px;}

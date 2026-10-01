@@ -91,6 +91,33 @@
 			}, 100);
 		});
 
+		// Arrays n shit		
+
+		var imgs = ["images/wave_0.png","images/wave_1.png","images/wave_2.png","images/wave_3.png"];
+
+		// little function to change the wave thingy
+
+		let isActive = false;
+		let animationId = null;
+
+		function delay(ms) {
+		return new Promise(resolve => setTimeout(resolve, ms));
+		}
+
+		window.onload=function(){
+		async function loop_() {
+			if (isActive) {
+				for(let i = 0; i < imgs.length; i++){
+					document.getElementById("waveimgs").style.backgroundImage = "url(" + imgs[i] + ")"
+					await delay(40);
+				}
+				animationId = requestAnimationFrame(loop_);
+			}
+		}
+			isActive = true;
+			loop_();
+		};
+
 	// Tweaks/fixes.
 
 		// Mobile: Revert to native scrolling.
