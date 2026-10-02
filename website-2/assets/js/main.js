@@ -97,7 +97,6 @@
 
 		// little function to change the wave thingy
 
-		let isActive = false;
 		let animationId = null;
 
 		function delay(ms) {
@@ -106,14 +105,12 @@
 
 		window.onload=function(){
 		async function loop_() {
-			if (isActive) {
 				for(let i = 0; i < imgs.length; i++){
 					document.getElementById("waveimgs").style.backgroundImage = "url(" + imgs[i] + ")"
 					await delay(40);
 				}
 				animationId = requestAnimationFrame(loop_);
 			}
-		}
 			isActive = true;
 			loop_();
 		};
