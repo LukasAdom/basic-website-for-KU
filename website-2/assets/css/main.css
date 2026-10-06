@@ -179,6 +179,9 @@ input, select, textarea {
 
 	}
 
+	.test{
+		
+	}
 	
 		@keyframes wmove{
 		from{background-position: 0px 0px; }
