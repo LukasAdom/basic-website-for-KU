@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: redc;
-  src: url(fon./Redaction35-Regular.otf); 
+  src: url(fonts/Redaction35-Regular.otf); 
 }
 
 @font-face {
   font-family: redcBold;
-  src: url(fon./Redaction35-Bold.otf); 
+  src: url(fonts/Redaction35-Bold.otf); 
 }
 
 body{
